@@ -3,6 +3,15 @@ body{
     font-family: 'Press Start 2P', cursive;
 }
 
+#info{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    font-size: 0.8em;
+    color:white;
+    text-align: center;
+}
+
 #button_container{
     position: absolute;
     bottom: 0;
