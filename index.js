@@ -109,7 +109,7 @@ canvas.addEventListener("mouseup", function (evt) {
     penDown = false;
   });
 
-canvas.addEventListener("touchstart", function(evt){
+canvas.addEventListener("touchend", function(evt){
     let touches = Array.from(evt.touches);
     let touch = touches[0];
 
