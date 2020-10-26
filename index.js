@@ -30,7 +30,7 @@ function paintStart(x, y){
 }
 
 function paintMove(x, y){
-    ctx. beginPath();
+    ctx.beginPath();
     let num = Math.floor(Math.random()* 5);
     ctx.fillStyle = colors[num];
     ctx.arc(last_x, last_y, 5, 0, Math.PI*2);
@@ -40,7 +40,7 @@ function paintMove(x, y){
 }
 
 function paintMove2(x, y){
-
+    ctx.beginPath();
 }
 
 canvas.addEventListener("mousedown", function(evt){
@@ -54,3 +54,16 @@ canvas.addEventListener("mousedown", function(evt){
 canvas.addEventListener("mouseup", function (evt) {
     penDown = false;
   });
+
+canvas.addEventListener("touchstart", function(evt){
+    let touches = Array.from(evt.touches);
+  let touch = touches[0];
+
+  let x = touch.clientX;
+  let y = touch.clientY;
+
+  last_x = x;
+  last_y = y;
+  paintStart(x,y);
+  paintMove(x, y);
+})
