@@ -14,7 +14,7 @@ body{
 
 button{
     font-family: 'Press Start 2P', cursive;
-    width: 10vw;
+    padding: 5px 10px;
     height:5vh;
     font-size:1em;
     color: #ffffff;
